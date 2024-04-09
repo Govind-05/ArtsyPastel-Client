@@ -27,7 +27,7 @@ function circularImagesContainer({images}) {
               width:"5rem",
             };
     
-            return <img key={index} src={image} alt={`Image ${index}`} style={imageStyle} className={( index==1 || index==3 || index==6 || index==8 || index==11|| index==13)&&"spinner"}/>;
+            return <img key={index} src={image} alt={`Image ${index}`} style={imageStyle} className={( index==1 || index==3 || index==6 || index==8 || index==11|| index==13)?"spinner":undefined}/>;
           })}
         </div>
       );
