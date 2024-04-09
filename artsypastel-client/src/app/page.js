@@ -28,16 +28,32 @@ export default function Home() {
       <div className='h-[80vh] md:h-screen lg:h-[110vh] relative intro-container'>
         <div className="h-full bg-[#F4E04D] relative flex justify-center items-end">
           <div className='absolute top-0 left-0 right-0' style={{ zIndex: 3 }}>
-            <div className='flex flex-col mt-2'>
-              <span className='font-mountainsOfChristmas text-6xl flex justify-between'>
-                <span>DIMPLE,</span>
-                <img className='spinner' src="/images/circle-image-4.png" alt="art images" style={{width:"4rem"}}/>
-              </span>
-              <span className='font-mountainsOfChristmas text-center text-6xl'>ARTIST,</span>
-              <span className='font-mountainsOfChristmas text-right pr-3 text-6xl'>CREATOR</span>
-              {/* <span className='font-rampart'>@artsypastel</span> */}
-            </div>
-            <div className='individual-images-container'>
+            
+              <div>
+                <div className='flex flex-col mt-2'>
+                  <span className='font-mountainsOfChristmas text-6xl flex justify-between'>
+                    <span className='m-5'>DIMPLE,</span>
+                    <img className='spinner lg:hidden' src="/images/circle-image-4.png" alt="art images" style={{width:"4rem"}}/>
+                  </span>
+                  <span className='font-mountainsOfChristmas text-center text-6xl lg:text-left m-5'>ARTIST,</span>
+                  <span className='font-mountainsOfChristmas text-right pr-3 text-6xl lg:text-left m-5'>CREATOR</span>
+                  {/* <span className='font-rampart'>@artsypastel</span> */}
+                </div>
+              </div>
+              <div className='flex justify-end relative bottom-16'>
+                <div className='flex flex-col mt-2  -scale-x-100'>
+                  <span className='font-mountainsOfChristmas text-6xl flex justify-between'>
+                    <span className='m-5'>DIMPLE,</span>
+                    <img className='spinner lg:hidden' src="/images/circle-image-4.png" alt="art images" style={{width:"4rem"}}/>
+                  </span>
+                  <span className='font-mountainsOfChristmas text-center text-6xl lg:text-left m-5'>ARTIST,</span>
+                  <span className='font-mountainsOfChristmas text-right pr-3 text-6xl lg:text-left m-5'>CREATOR</span>
+                  {/* <span className='font-rampart'>@artsypastel</span> */}
+                </div>
+              </div>
+            
+          
+            <div className='individual-images-container '>
               <div className='pl-2'>
                 <span><img className='spinner' src="/images/circle-image-1.png" alt="art images" style={{width:"4rem"}}/></span>
               </div>
