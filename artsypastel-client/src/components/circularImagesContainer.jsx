@@ -14,7 +14,7 @@ function circularImagesContainer({images}) {
       const angleStep = (2 * Math.PI) / images.length;
     
       return (
-        <div className="circle-container" style={containerStyle} className='hidden md:block'>
+        <div className="circle-container hidden md:block" style={containerStyle} >
           {images.map((image, index) => {
             const angle = index * angleStep;
             const x = Math.cos(angle) * 370 + 150; // Adjust radius as needed
