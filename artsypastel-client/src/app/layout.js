@@ -1,4 +1,6 @@
 import "./globals.css";
+import "@/styles/global.css"
+import "@/styles/responsive.css";
 import Navbar from "@/components/navbar/navbar";
 
 export const metadata = {

@@ -1,0 +1,11 @@
+@media (max-height:844px) {
+    .intro-container{
+        height: 90vh;
+    }
+}
+
+@media (max-height:714px) {
+    .individual-images-container{
+        display: none; 
+    }
+}

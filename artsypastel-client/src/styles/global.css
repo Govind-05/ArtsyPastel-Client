@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Rampart+One&display=swap');
 
+body{
+    overflow-x: hidden;
+}
+
 .spinner{
     animation: spin 4s linear infinite;
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import "@/styles/global.css"
 
 function circularImagesContainer({images}) {
     const containerStyle = {
@@ -18,7 +17,7 @@ function circularImagesContainer({images}) {
           {images.map((image, index) => {
             const angle = index * angleStep;
             const x = Math.cos(angle) * 370 + 150; // Adjust radius as needed
-            const y = Math.sin(angle) * 370 + 200; // Adjust radius as needed
+            const y = Math.sin(angle) * 370 + 310; // Adjust radius as needed
             
             
             const imageStyle = {
