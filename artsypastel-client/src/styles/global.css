@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Rampart+One&display=swap');
+
+.spinner{
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}

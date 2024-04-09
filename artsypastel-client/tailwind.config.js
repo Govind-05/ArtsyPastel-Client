@@ -14,6 +14,10 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'rampart': ['"Rampart One"','ui-sans-serif', 'system-ui'],
+        'mountainsOfChristmas': ['"Mountains of Christmas"','ui-sans-serif', 'system-ui'],
+      }
     },
   },
   plugins: [require("daisyui")],
