@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <body>
+      <body className="max-w-[100vw] bg-slate-100">
         <Navbar />
         {children}
         </body>

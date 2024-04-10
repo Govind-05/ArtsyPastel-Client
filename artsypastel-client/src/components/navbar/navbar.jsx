@@ -17,7 +17,7 @@ export default function navbar() {
           </ul>
         </div>
       </div>
-      <div className="navbar-center">
+      <div className="max-sm:navbar-start md:navbar-centre">
         <a className="btn text-xl bg-inherit border-none hover:bg-inherit">ArtsyPastel</a>
       </div>
       <div className="navbar-end">
