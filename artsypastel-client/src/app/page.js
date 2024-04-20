@@ -1,7 +1,9 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Wave from '@/components/wave';
 import CircularImagesContainer from '@/components/circularImagesContainer';
 import Slideshow from '@/components/slideshow/slideshow';
+import BackgroundImageCard from '@/components/backgroundImageCard/backgroundImageCard';
 import { IoIosArrowBack } from "react-icons/io";
 import Image from 'next/image';
 
@@ -23,6 +25,12 @@ export default function Home() {
     "/images/circle-image-1.png",
     "/images/circle-image-2.png",
   ];
+
+  const [serviceCardsShow,setServiceCardsShow] = useState(false)
+  
+  const handleShowCards = ()=>{
+
+  }
 
   return (
     <>
@@ -86,7 +94,23 @@ export default function Home() {
         <Slideshow />
       </div>
 
-      <div className='h-[5rem]'></div>
+      <div className='flex'>
+        <div className='w-6/12 flex items-center justify-center relative m-4'>
+          <BackgroundImageCard classes={
+            !serviceCardsShow?`absolute left-2/4 bg-[#b1fd74] top-2/4 -rotate-[24deg] -translate-x-16 -translate-y-[calc(50%+4rem)]`
+            :
+            `absolute left-0 bg-[#b1fd74] top-0 transition-all duration-1000`
+            } 
+          />
+          <BackgroundImageCard classes={!serviceCardsShow?`absolute left-2/4 bg-[#74c1fd] top-2/4 -rotate-[18deg] -translate-x-12 -translate-y-[calc(50%+3rem)]`:`absolute left-full -translate-x-[100%] bg-[#74c1fd] top-0 transition-all duration-1000`} />
+          <BackgroundImageCard classes={!serviceCardsShow?'absolute left-2/4 z-[3]':'absolute left-2/4 z-[3] -translate-x-[50%] transition-all'} onMouseEnter={()=>setServiceCardsShow(true)} />
+          <BackgroundImageCard classes={!serviceCardsShow?'absolute left-2/4 bg-[#fd74d6] top-2/4 -rotate-12 -translate-x-8 -translate-y-[calc(50%+2rem)]':`absolute left-0 bg-[#fd74d6] top-full -translate-y-[100%] transition-all duration-1000`} />
+          <BackgroundImageCard classes={!serviceCardsShow?'absolute left-2/4 bg-[#fd7474] top-2/4 -rotate-6 -translate-x-4 -translate-y-[calc(50%+1rem)]':`absolute left-full -translate-x-[100%] bg-[#fd7474] top-full -translate-y-[100%] transition-all duration-1000`} />
+        </div>
+        <div className='w-6/12 flex justify-center'>
+        <Image src="/images/services-artist.png" alt="art images" width={512} height={512} />
+        </div>
+      </div>
 
     </>
   );
