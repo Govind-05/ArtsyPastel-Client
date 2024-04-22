@@ -1,14 +1,17 @@
 import React from 'react'
 
-function backgroundImageCard({classes,onMouseEnter}) {
+function backgroundImageCard({classes,onMouseEnter,heading,subheading}) {
   return (
-    <div className={`w-44 h-60 bg-orange-300 rounded-2xl flex flex-col justify-center ${classes} hover:cursor-pointer`} onMouseEnter={onMouseEnter} style={{transitionDuration:"2s"}}>
+    <div className={`w-44 h-60 rounded-2xl ${classes} hover:cursor-pointer`} onMouseEnter={onMouseEnter} style={{transitionDuration:"2s"}}>
+      <div className='flex flex-col justify-center w-full h-full backdrop-blur-[2px] hover:backdrop-blur-[4px]'>
             <div className='text-3xl text-center mb-3'>
-              Special Requests
+              {heading}
             </div>
             <div className='text-center'>
-              We would love to hear more about your ideas.
+              {subheading}
             </div>
+
+      </div>
           </div>
   )
 }

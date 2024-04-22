@@ -94,18 +94,18 @@ export default function Home() {
         <Slideshow />
       </div>
 
-      <div className='flex'>
+      <div className={`flex ${serviceCardsShow&&"bg-red-400 transition-all duration-1000"}`} onMouseLeave={()=>setServiceCardsShow(false)}>
         <div className='w-6/12 flex items-center justify-center relative m-4'>
-          <BackgroundImageCard classes={
-            !serviceCardsShow?`absolute left-2/4 bg-[#b1fd74] top-2/4 -rotate-[24deg] -translate-x-16 -translate-y-[calc(50%+4rem)]`
+          <BackgroundImageCard heading={"Customization"} subheading={"We will customise your belongings"}  classes={
+            !serviceCardsShow?`bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] absolute left-2/4 bg-[#b1fd74] top-2/4 -rotate-[24deg] -translate-x-16 -translate-y-[calc(50%+4rem)]`
             :
-            `absolute left-0 bg-[#b1fd74] top-0 transition-all duration-1000`
+            `bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] hover:translate-y-[5px] absolute left-0 bg-[#b1fd74] top-0 transition-all duration-1000`
             } 
           />
-          <BackgroundImageCard classes={!serviceCardsShow?`absolute left-2/4 bg-[#74c1fd] top-2/4 -rotate-[18deg] -translate-x-12 -translate-y-[calc(50%+3rem)]`:`absolute left-full -translate-x-[100%] bg-[#74c1fd] top-0 transition-all duration-1000`} />
-          <BackgroundImageCard classes={!serviceCardsShow?'absolute left-2/4 z-[3]':'absolute left-2/4 z-[3] -translate-x-[50%] transition-all'} onMouseEnter={()=>setServiceCardsShow(true)} />
-          <BackgroundImageCard classes={!serviceCardsShow?'absolute left-2/4 bg-[#fd74d6] top-2/4 -rotate-12 -translate-x-8 -translate-y-[calc(50%+2rem)]':`absolute left-0 bg-[#fd74d6] top-full -translate-y-[100%] transition-all duration-1000`} />
-          <BackgroundImageCard classes={!serviceCardsShow?'absolute left-2/4 bg-[#fd7474] top-2/4 -rotate-6 -translate-x-4 -translate-y-[calc(50%+1rem)]':`absolute left-full -translate-x-[100%] bg-[#fd7474] top-full -translate-y-[100%] transition-all duration-1000`} />
+          <BackgroundImageCard heading={"Portraits"} subheading={"We will deliver your portraits."} classes={!serviceCardsShow?`bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] absolute left-2/4 bg-[#74c1fd] top-2/4 -rotate-[18deg] -translate-x-12 -translate-y-[calc(50%+3rem)]`:`bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] hover:translate-y-[5px] absolute left-full -translate-x-[100%] bg-[#74c1fd] top-0 transition-all duration-1000`} />
+          <BackgroundImageCard heading={"Special Requests"} subheading={"We would love to hear more about your ideas."} classes={!serviceCardsShow?'shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] bg-[url("/images/background.jpg")] bg-cover absolute left-2/4 z-[3] bg-orange-400':'bg-[url("/images/background.jpg")] bg-cover hover:-translate-y-[5px] shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] bg-orange-400 absolute left-2/4 z-[3] -translate-x-[50%] transition-all'} onMouseEnter={()=>setServiceCardsShow(true)} />
+          <BackgroundImageCard heading={"Cards"} subheading={"Prettu much related to cards"} classes={!serviceCardsShow?'bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] absolute left-2/4 bg-[#fd74d6] top-2/4 -rotate-12 -translate-x-8 -translate-y-[calc(50%+2rem)]':`bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] hover:-translate-y-[calc(100%+5px)] absolute left-0 bg-[#fd74d6] top-full -translate-y-[100%] transition-all duration-1000`} />
+          <BackgroundImageCard heading={"Coming soon..."} subheading={"More services in the future"} classes={!serviceCardsShow?'bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] absolute left-2/4 bg-[#fd7474] top-2/4 -rotate-6 -translate-x-4 -translate-y-[calc(50%+1rem)]':`bg-[url("/images/background.jpg")] bg-cover shadow-[-5px_5px_11px_0px_rgba(0,0,0,0.5)] hover:-translate-y-[calc(100%+5px)] absolute left-full -translate-x-[100%] bg-[#fd7474] top-full -translate-y-[100%] transition-all duration-1000`} />
         </div>
         <div className='w-6/12 flex justify-center'>
         <Image src="/images/services-artist.png" alt="art images" width={512} height={512} />
